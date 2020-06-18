@@ -1,0 +1,28 @@
+@model CertifikatiFilter
+
+<form id="filterform" asp-action="Filter" method="post">
+    <div class="form-group row">   
+        <label asp-for="Id" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-2">
+            <input asp-for="Id" readonly="readonly" class="form-control" data-autocomplete-placeholder="certifikati" />
+        </div>
+        <div class="col-sm-6">
+            <input class="form-control" data-autocomplete="partner" asp-for="Naziv" />
+        </div>
+    </div>
+
+
+
+    <div class="form-group row">   
+        <label class="col-sm-2 col-form-label">Opis</label>
+        <div class="col-sm-4">
+            <input asp-for="Opis" class="form-control" />
+        </div>
+        <div class="col-sm-1 text-nowrap">
+            <button type="submit" class="btn btn-sm btn-secondary" title="Postavi filter"><i class="fas fa-filter"></i></button>
+            <a class="btn btn-sm btn-secondary" asp-action="Index" title="Ukloni filter">
+                <i class="fas fa-trash"></i>
+            </a>
+        </div>
+    </div>
+</form>
